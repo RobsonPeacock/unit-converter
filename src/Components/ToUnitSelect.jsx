@@ -11,9 +11,10 @@ const ToUnitSelect = ({ setToUnitValue }) => {
   return (
     <Form.Select onChange={handleChange}>
       <option>To Unit</option>
-      <option value="1">MM</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="CM">CM</option>
+      <option value="MM">MM</option>
+      <option value="Metre">Metre</option>
+      <option value="Foot">Foot</option>
     </Form.Select>
   )
 }
