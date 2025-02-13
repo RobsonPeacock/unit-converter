@@ -28,11 +28,32 @@ const UnitConverter = () => {
 
   return (
     <>
-      <FromUnitSelect setFromUnitValue={setFromUnitValue} />
-      <ToUnitSelect setToUnitValue={setToUnitValue} />
-      <InputField setInputValue={setInputValue} />
-      <output name="output">{outputValue}</output>
-      <Button onClick={convertUnits} />
+      <div class="row">
+        <div class="col-lg-6 mb-3">
+          <FromUnitSelect setFromUnitValue={setFromUnitValue} />
+        </div>
+        <div class="col-lg-6 mb-3">
+          <ToUnitSelect setToUnitValue={setToUnitValue} />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <InputField setInputValue={setInputValue} />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 my-3">
+          <output name="output">{outputValue}</output>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <Button onClick={convertUnits} />
+        </div>
+      </div>
     </>
   )
 }
