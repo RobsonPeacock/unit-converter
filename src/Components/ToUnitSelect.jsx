@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 
 const ToUnitSelect = ({ setToUnitValue }) => {
-  const [selectedValue, setSelectedValue] = useState('');
-
   const handleChange = (event) => {
     setToUnitValue(event.target.value)
   }
