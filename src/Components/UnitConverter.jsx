@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import units from '../units.json';
 import FromUnitSelect from './FromUnitSelect';
 import ToUnitSelect from './ToUnitSelect';
 import InputField from './InputField';
@@ -11,16 +12,18 @@ const UnitConverter = () => {
   const [outputValue, setOutputValue] = useState('');
 
   const convertUnits = () => {
+    const fromUnit = units.find(unit => unit.name === fromUnitValue);
+    const toUnit = units.find(unit => unit.name === toUnitValue);
+
     if (fromUnitValue === toUnitValue) {
       setOutputValue(fromUnitValue);
-    } else if (fromUnitValue === "MM" && toUnitValue === "CM") {
-      setOutputValue(inputValue / 10)
-    } else if (fromUnitValue === "CM" && toUnitValue === "MM") {
-      setOutputValue(inputValue * 10)
-    } else if (fromUnitValue === "Metre" && toUnitValue === "Foot") {
-      setOutputValue(inputValue * 3.281)
-    } else if (fromUnitValue === "Foot" && toUnitValue === "Metre") {
-      setOutputValue(inputValue / 3.281)
+      return;
+    }
+
+    if (fromUnit && toUnit && fromUnit.conversions[toUnit.name]) {
+      setOutputValue(inputValue * fromUnit.conversions[toUnit.name]);
+    } else if (fromUnit && toUnit && toUnit.conversions[toUnit.name]) {
+      setOutputValue(inputValue / toUnit.conversions[toUnit.name]);
     } else {
       setOutputValue("Error")
     }

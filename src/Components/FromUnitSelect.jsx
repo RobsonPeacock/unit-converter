@@ -14,6 +14,7 @@ const FromUnitSelect = ({ setFromUnitValue }) => {
         <option value="MM">MM</option>
         <option value="Metre">Metre</option>
         <option value="Foot">Foot</option>
+        <option value="KM">KM</option>
       </Form.Select>
     </>
   )

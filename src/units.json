@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Metre",
+    "conversions": {
+      "KM": 0.001,
+      "Foot": 3.28084,
+      "MM": 1000,
+      "CM": 100
+    }
+  },
+  {
+    "name": "KM",
+    "conversions": {
+      "Metre": 1000,
+      "Foot": 3280.84,
+      "MM": 1000000,
+      "CM": 100000
+    }
+  },
+  {
+    "name": "Foot",
+    "conversions": {
+      "Metre": 0.3048,
+      "KM": 0.0003048,
+      "MM": 304.8,
+      "CM": 30.48
+    }
+  },
+  {
+    "name": "MM",
+    "conversions": {
+      "Metre": 0.001,
+      "KM": 0.000001,
+      "Foot": 0.00328084,
+      "CM": 0.1
+    }
+  },
+  {
+    "name": "CM",
+    "conversions": {
+      "Metre": 0.01,
+      "KM": 0.00001,
+      "Foot": 0.0328084,
+      "MM": 10
+    }
+  }
+]
